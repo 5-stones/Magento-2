@@ -180,6 +180,10 @@ class GigyaMageHelper extends AbstractHelper
         $settings = $this->settingsFactory->create();
         $settings = $settings->load(1);
         $encrypted_secret = $settings->getData('app_secret');
+
+		return $encrypted_secret;
+		/*
+		 * Bypass Gigya's decryption, not needed
         if (strlen($encrypted_secret) < 5 ) {
             $this->gigyaLog(__FUNCTION__ . " No valid secret key found in DB.");
         }
@@ -187,6 +191,7 @@ class GigyaMageHelper extends AbstractHelper
         $key = $this->getEncKey();
         $dec = GigyaApiHelper::decrypt($encrypted_secret, $key);
         return $dec;
+		 */
     }
 
     /**

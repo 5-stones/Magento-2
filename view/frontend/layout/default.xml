@@ -8,7 +8,7 @@
     <body>
         <referenceContainer name="footer">
             <container name="gigya.GigyaIM.gigya_script">
-                <block class="Gigya\GigyaIM\Block\GigyaScript" name="Gigya_GigyaIM::GigyaScript" template="gigya_script.phtml">
+                <block class="Gigya\GigyaIM\Block\GigyaScript" name="Gigya_GigyaIM_GigyaScript" template="gigya_script.phtml">
                 </block>
             </container>
         </referenceContainer>
